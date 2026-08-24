@@ -1,4 +1,4 @@
-public class Main{
+public class EstudanteTeste{
 
     public static void main(String[] args) {
        Estudante estudante = new Estudante("Pudim");
