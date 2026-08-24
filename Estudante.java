@@ -18,7 +18,6 @@ public class Estudante{
         System.out.print("\nInsira as notas:");
         notas[i] = Double.parseDouble(notinhas.nextLine());
         }
-        notinhas.close();
     }
 
     public double calc(){
