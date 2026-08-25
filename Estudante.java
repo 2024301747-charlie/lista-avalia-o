@@ -4,7 +4,6 @@ public class Estudante{
     private double[] notas;
     private double media, menor;
 
-
     public Estudante(String nome){
         this.nome=nome;
         this.notas=new double[5];
@@ -18,16 +17,26 @@ public class Estudante{
         System.out.print("\nInsira as notas:");
         notas[i] = Double.parseDouble(notinhas.nextLine());
         }
-        notinhas.close();
     }
 
     public double calc(){
-        double soma=0; 
+        double soma=0.0; 
         for(int i=0;i<5; i++){
            soma += notas[i];
         }
         media = soma/5;
         return media;
+    }
+
+    public double calc(Integer[] pesos){
+        double soma=0.0;    
+        int pesos=0;
+        for (int i=0; i<pesos.size();i++){
+            soma += notas.get(i) * pesos[i];
+            pesos += pesos[i];
+        }
+
+        return soma/pesos;
     }
 
     public double menorNota(){
